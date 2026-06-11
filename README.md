@@ -33,37 +33,41 @@ Por derechos de imagen no se han descargado fotos suyas de Instagram/TikTok. La 
 | `gallery-1..6.svg` | Galería | 800×1000 |
 | `product-1..6.svg` | Productos de la tienda | 800×800 |
 
-## 🚀 Publicar la web (paso a paso)
+## 🚀 Publicar la web (paso a paso, con GitHub Pages)
 
-La opción más rápida y gratuita: **Vercel** (también vale Netlify o GitHub Pages).
+Gratis, sin cuentas nuevas: se publica directamente desde este repositorio. ⚠️ Con cuenta gratuita de GitHub, el repo debe ser **público** para usar Pages.
 
-### 1. Desplegar en Vercel (5 min)
+### 1. Activar GitHub Pages (2 min)
 
-1. Entra en [vercel.com](https://vercel.com) → **Sign up with GitHub**.
-2. **Add New → Project** → importa el repositorio `alencarzao`.
-3. Framework preset: **Other** (es estático, no hay build). → **Deploy**.
-4. En ~30 segundos tendrás una URL tipo `alencarzao.vercel.app`. ✅ Con esto ya puedes enseñar la demo desde cualquier móvil **antes de conectar el dominio**.
+1. En GitHub: repo `alencarzao` → **Settings → Pages**.
+2. En **Source** elige **Deploy from a branch** → rama `main` (o la rama donde esté la web) → carpeta `/ (root)` → **Save**.
+3. En ~1 minuto la web estará en
+   `https://tiendabussinesshoptik-dotcom.github.io/alencarzao/`
+   ✅ Esta URL ya te sirve para enseñar la demo desde cualquier móvil **antes de conectar el dominio**.
 
-### 2. Conectar los dominios de GoDaddy
+### 2. Conectar `alencarzao.com` (GoDaddy)
 
-Tienes dos dominios: `alencarzao.com` (principal) y `alencarzão.com` (con tilde — internamente es `xn--alencarzo-s2a.com`).
+**En GitHub:** Settings → Pages → **Custom domain** → escribe `alencarzao.com` → Save. (GitHub añadirá solo un archivo `CNAME` a la rama.)
 
-**En Vercel:**
-1. Proyecto → **Settings → Domains** → añade `alencarzao.com` y `www.alencarzao.com`.
-2. Vercel te mostrará los registros DNS exactos a crear.
-
-**En GoDaddy** ([dcc.godaddy.com](https://dcc.godaddy.com) → tu dominio → **DNS → Manage DNS**):
+**En GoDaddy** ([dcc.godaddy.com](https://dcc.godaddy.com) → tu dominio → **DNS → Manage DNS**), crea estos registros:
 
 | Tipo | Nombre | Valor |
 |---|---|---|
-| A | `@` | `76.76.21.21` |
-| CNAME | `www` | `cname.vercel-dns.com` |
+| A | `@` | `185.199.108.153` |
+| A | `@` | `185.199.109.153` |
+| A | `@` | `185.199.110.153` |
+| A | `@` | `185.199.111.153` |
+| CNAME | `www` | `tiendabussinesshoptik-dotcom.github.io` |
 
-> Borra los registros A/CNAME de "parking" que GoDaddy crea por defecto si entran en conflicto.
+> Borra los registros A/CNAME de "parking" que GoDaddy crea por defecto si entran en conflicto (suele haber un A `@` apuntando a "Parked").
 
-3. Espera la propagación DNS (de 10 min a 48 h, normalmente <1 h). Vercel emite el certificado HTTPS automáticamente.
+Espera la propagación DNS (de 10 min a 48 h, normalmente <1 h). Cuando GitHub verifique el dominio, marca **Enforce HTTPS** en Settings → Pages para el certificado SSL automático.
 
-**Para `alencarzão.com` (el de la tilde),** lo más simple es redirigirlo al principal desde GoDaddy: dominio → **Forwarding → Domain → Add Forwarding** → `https://alencarzao.com`, tipo *Permanent (301)*. Así cualquiera que lo escriba acaba en la web buena. (Alternativa: añadirlo también como dominio en Vercel con los mismos registros DNS y que Vercel redirija.)
+### 3. El dominio con tilde: `alencarzão.com`
+
+Internamente es `xn--alencarzo-s2a.com`. Lo más simple es redirigirlo al principal desde GoDaddy: dominio → **Forwarding → Domain → Add Forwarding** → `https://alencarzao.com`, tipo *Permanent (301)*. Así cualquiera que lo escriba acaba en la web buena.
+
+> Alternativas si algún día no quieres GitHub Pages: Netlify o Cloudflare Pages (gratis, mismo concepto), o el hosting propio de GoDaddy (de pago — se suben los archivos tal cual por cPanel/FTP, sin tocar DNS).
 
 ### 3. Activar el formulario de contacto
 
@@ -77,11 +81,12 @@ Tienes dos dominios: `alencarzao.com` (principal) y `alencarzão.com` (con tilde
 
 Opciones de más fácil a más completa:
 
-1. **Vercel preview** (recomendada): el paso 1 de arriba te da `alencarzao.vercel.app` sin tocar dominios — ábrela en Safari del iPhone. Es privada de facto (nadie conoce la URL).
+1. **GitHub Pages sin dominio** (recomendada): el paso 1 de arriba te da `https://tiendabussinesshoptik-dotcom.github.io/alencarzao/` sin tocar dominios — ábrela en Safari del iPhone.
 2. **Desde GitHub sin desplegar nada:** abre en Safari
    `https://raw.githack.com/tiendabussinesshoptik-dotcom/alencarzao/claude/portfolio-website-multilingual-7054m5/index.html`
    (sirve el HTML del repo renderizado; requiere que el repo sea público).
 3. **En local:** en tu ordenador, dentro de la carpeta del repo: `python3 -m http.server 8000` y desde el iPhone (misma WiFi) entra a `http://IP-DE-TU-PC:8000`.
+4. **Simulador con marco de iPhone:** abre `preview-iphone.html` en el navegador del ordenador — muestra la web dentro de un iPhone 15 a tamaño real con botones para cambiar de página.
 
 ## Desarrollo local
 
