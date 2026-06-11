@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin — Alencarzao</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👑</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+<body>
+
+  <!-- ============ LOGIN ============ -->
+  <div id="login-screen" class="login-screen">
+    <div class="login-card">
+      <div class="login-logo">Alencarzao<span>.</span></div>
+      <p class="login-sub">Private admin panel</p>
+      <form id="login-form">
+        <input type="password" id="login-pass" placeholder="Password" autocomplete="current-password" required>
+        <button type="submit" class="btn-admin">Sign in</button>
+        <p class="login-err" id="login-err">Wrong password — try again</p>
+        <p class="login-hint">Demo access: <code>alencar2026</code></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- ============ APP ============ -->
+  <div id="app" class="app" hidden>
+    <aside class="sidebar">
+      <div class="side-logo">Alencarzao<span>.</span><small>ADMIN</small></div>
+      <nav class="side-nav">
+        <button class="side-link active" data-view="dashboard">📊 Dashboard</button>
+        <button class="side-link" data-view="products">🛍️ Products</button>
+        <button class="side-link" data-view="orders">📦 Orders</button>
+        <button class="side-link" data-view="leads">💌 Brand Leads</button>
+        <button class="side-link" data-view="social">📈 Social Stats</button>
+      </nav>
+      <div class="side-foot">
+        <a href="../index.html">← View site</a>
+        <button id="logout-btn">Log out</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <h1 id="view-title">Dashboard</h1>
+        <div class="topbar-user"><span class="avatar">G</span><div><b>Geovanna Alencar</b><small>Owner</small></div></div>
+      </header>
+
+      <!-- Dashboard -->
+      <section id="view-dashboard" class="view active">
+        <div class="kpi-grid">
+          <div class="kpi"><small>Revenue (30d, demo)</small><b id="kpi-revenue">$0</b><span class="trend up">▲ 18% vs last month</span></div>
+          <div class="kpi"><small>Orders</small><b id="kpi-orders">0</b><span class="trend up">▲ 12%</span></div>
+          <div class="kpi"><small>Brand leads</small><b id="kpi-leads">0</b><span class="trend up">▲ 9 new this week</span></div>
+          <div class="kpi"><small>Total followers</small><b>15.8M</b><span class="trend up">▲ 240K this month</span></div>
+        </div>
+        <div class="panel-row">
+          <div class="panel">
+            <h3>Follower growth (TikTok, last 8 months)</h3>
+            <div class="chart" id="chart-growth"></div>
+          </div>
+          <div class="panel">
+            <h3>Latest brand leads</h3>
+            <div id="dash-leads" class="mini-list"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Products -->
+      <section id="view-products" class="view">
+        <div class="view-head">
+          <p class="muted">Manage the merch catalog. Changes are stored locally (demo).</p>
+          <button class="btn-admin" id="add-product-btn">+ Add product</button>
+        </div>
+        <div class="table-wrap">
+          <table class="admin-table" id="products-table">
+            <thead><tr><th>Product</th><th>Category</th><th>Price</th><th>Stock</th><th>Status</th><th></th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Orders -->
+      <section id="view-orders" class="view">
+        <p class="muted">Orders placed in the demo store appear here automatically.</p>
+        <div class="table-wrap">
+          <table class="admin-table" id="orders-table">
+            <thead><tr><th>Order</th><th>Date</th><th>Items</th><th>Total</th><th>Status</th><th></th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Leads -->
+      <section id="view-leads" class="view">
+        <p class="muted">Proposals sent from the “Work With Me” form appear here (also delivered by email).</p>
+        <div class="table-wrap">
+          <table class="admin-table" id="leads-table">
+            <thead><tr><th>Brand</th><th>Contact</th><th>Type</th><th>Budget</th><th>Date</th><th>Status</th><th></th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Social -->
+      <section id="view-social" class="view">
+        <div class="kpi-grid">
+          <div class="kpi pink"><small>TikTok</small><b>12.4M</b><span>@rigbylokaporradeira · 9.4% eng.</span></div>
+          <div class="kpi gold"><small>Instagram</small><b>3.0M</b><span>@alencarzaoficial · 7.8% eng.</span></div>
+          <div class="kpi dark"><small>YouTube</small><b>420K</b><span>Alencarzao · 380K avg views</span></div>
+          <div class="kpi"><small>Monthly views</small><b>80M+</b><span>All platforms combined</span></div>
+        </div>
+        <div class="panel-row">
+          <div class="panel">
+            <h3>Views per platform (monthly)</h3>
+            <div class="chart" id="chart-views"></div>
+          </div>
+          <div class="panel">
+            <h3>Top content this month</h3>
+            <div class="mini-list">
+              <div class="mini-item"><span class="ic">🎵</span><div><b>Dance trend — “Verão 2026”</b><small>TikTok · 8.2M views · 1.1M likes</small></div></div>
+              <div class="mini-item"><span class="ic">📸</span><div><b>Beach photoshoot reel</b><small>Instagram · 3.4M views · 420K likes</small></div></div>
+              <div class="mini-item"><span class="ic">🎵</span><div><b>GRWM — show in São Paulo</b><small>TikTok · 5.7M views · 890K likes</small></div></div>
+              <div class="mini-item"><span class="ic">▶️</span><div><b>Vlog: a week in Rio</b><small>YouTube · 610K views</small></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="../assets/js/admin.js"></script>
+</body>
+</html>

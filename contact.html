@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work With Me — Alencarzao | Contact</title>
+  <meta name="description" content="Work with Alencarzao — campaigns, collaborations, events and press. Send your proposal.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💖</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header on-dark-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Alencarzao<span class="dot">.</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="about.html" data-i18n="nav.about">About</a></li>
+          <li><a href="mediakit.html" data-i18n="nav.mediakit">Media Kit</a></li>
+          <li><a href="shop.html" data-i18n="nav.shop">Shop</a></li>
+          <li><a href="links.html" data-i18n="nav.links">Links</a></li>
+          <li><a href="contact.html" class="active" data-i18n="nav.contact">Work With Me</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switch">
+          <button data-lang="en">EN</button>
+          <button data-lang="es">ES</button>
+          <button data-lang="pt">PT</button>
+        </div>
+        <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1 data-i18n="contact.hero.title">Work With Me</h1>
+      <p data-i18n="contact.hero.sub">Campaigns, collaborations, events and press. Let's create something amazing together.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container contact-grid">
+      <div class="contact-info reveal">
+        <span class="eyebrow" data-i18n="contact.info.title">Direct contact</span>
+        <div class="card">
+          <span class="ic">💌</span>
+          <div><h3 data-i18n="contact.info.email">Business email</h3><p style="word-break:break-all;"><a href="mailto:soyunviciadoalfortniteyas@gmail.com" style="color:var(--pink-deep); font-weight:600;">soyunviciadoalfortniteyas@gmail.com</a></p></div>
+        </div>
+        <div class="card">
+          <span class="ic">⏱️</span>
+          <div><h3 data-i18n="contact.info.mgmt">Management</h3><p data-i18n="contact.info.mgmt.text">Replies within 48 hours</p></div>
+        </div>
+        <div class="card">
+          <span class="ic">📍</span>
+          <div><h3 data-i18n="contact.info.based">Based in</h3><p data-i18n="contact.info.based.text">São Paulo, Brasil 🇧🇷</p></div>
+        </div>
+      </div>
+
+      <div class="form-card reveal reveal-d1">
+        <h2 style="font-size:1.5rem; margin-bottom:24px;" data-i18n="contact.form.title">Send a proposal</h2>
+        <form id="contact-form">
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="f-name" data-i18n="contact.form.name">Your name</label>
+              <input id="f-name" name="name" type="text" required data-i18n-placeholder="contact.form.name.ph" placeholder="Maria Silva">
+            </div>
+            <div class="form-field">
+              <label for="f-email" data-i18n="contact.form.email">Email</label>
+              <input id="f-email" name="email" type="email" required data-i18n-placeholder="contact.form.email.ph" placeholder="you@brand.com">
+            </div>
+            <div class="form-field">
+              <label for="f-company" data-i18n="contact.form.company">Brand / Company</label>
+              <input id="f-company" name="company" type="text" data-i18n-placeholder="contact.form.company.ph" placeholder="Brand name">
+            </div>
+            <div class="form-field">
+              <label for="f-budget" data-i18n="contact.form.budget">Estimated budget</label>
+              <select id="f-budget" name="budget">
+                <option data-i18n="contact.form.budget.1">Under $1,000</option>
+                <option data-i18n="contact.form.budget.2">$1,000 – $5,000</option>
+                <option data-i18n="contact.form.budget.3">$5,000 – $15,000</option>
+                <option data-i18n="contact.form.budget.4">$15,000+</option>
+              </select>
+            </div>
+            <div class="form-field full">
+              <label for="f-type" data-i18n="contact.form.type">Collaboration type</label>
+              <select id="f-type" name="type">
+                <option data-i18n="contact.form.type.1">TikTok / Instagram campaign</option>
+                <option data-i18n="contact.form.type.2">UGC content</option>
+                <option data-i18n="contact.form.type.3">Event / appearance</option>
+                <option data-i18n="contact.form.type.4">Brand ambassador</option>
+                <option data-i18n="contact.form.type.5">Press / other</option>
+              </select>
+            </div>
+            <div class="form-field full">
+              <label for="f-message" data-i18n="contact.form.message">Tell us about your project</label>
+              <textarea id="f-message" name="message" required data-i18n-placeholder="contact.form.message.ph" placeholder="Campaign goals, timeline, deliverables..."></textarea>
+            </div>
+          </div>
+          <div style="margin-top:24px;">
+            <button type="submit" class="btn btn-primary" style="width:100%;" data-i18n="contact.form.send">Send proposal</button>
+          </div>
+          <p class="form-note" data-i18n="contact.form.note">Your message goes straight to the management inbox. We reply within 48h.</p>
+          <div id="form-status" class="form-status"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border:none; padding-top:0;">
+        <span>© 2026 Alencarzao. <span data-i18n="footer.rights">All rights reserved.</span></span>
+        <span><span data-i18n="footer.made">Official website</span> · alencarzao.com</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

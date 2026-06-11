@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <defs>
+    <linearGradient id="gproduct5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0e6b5c"/><stop offset="50%" stop-color="#1ba88f"/><stop offset="100%" stop-color="#7fd4b8"/>
+    </linearGradient>
+    <radialGradient id="rproduct5" cx="80%" cy="15%" r="80%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="800" fill="url(#gproduct5)"/>
+  <rect width="800" height="800" fill="url(#rproduct5)"/>
+  <g transform="scale(1,1.0256410256410255)">
+  <g opacity="0.18" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round">
+    <path d="M60 720 q40 -120 10 -220 M60 720 q-60 -90 -50 -190 M60 720 q90 -60 110 -170 M60 720 q-110 -30 -160 -120"/>
+    <path d="M740 60 q-40 110 -10 200 M740 60 q60 80 50 180 M740 60 q-90 50 -110 160 M740 60 q110 30 160 110"/>
+  </g><path d="M120 134 L121.8 138.2 L126 140 L121.8 141.8 L120 146 L118.2 141.8 L114 140 L118.2 138.2 Z" fill="#f3dcae" opacity="0.5"/><path d="M640 210 L643 217 L650 220 L643 223 L640 230 L637 223 L630 220 L637 217 Z" fill="#f3dcae" opacity="0.62"/><path d="M200 546 L204.2 555.8 L214 560 L204.2 564.2 L200 574 L195.8 564.2 L186 560 L195.8 555.8 Z" fill="#f3dcae" opacity="0.74"/><path d="M680 634 L681.8 638.2 L686 640 L681.8 641.8 L680 646 L678.2 641.8 L674 640 L678.2 638.2 Z" fill="#f3dcae" opacity="0.86"/><path d="M420 80 L423 87 L430 90 L423 93 L420 100 L417 93 L410 90 L417 87 Z" fill="#f3dcae" opacity="0.5"/><path d="M90 386 L94.2 395.8 L104 400 L94.2 404.2 L90 414 L85.8 404.2 L76 400 L85.8 395.8 Z" fill="#f3dcae" opacity="0.62"/><path d="M700 414 L701.8 418.2 L706 420 L701.8 421.8 L700 426 L698.2 421.8 L694 420 L698.2 418.2 Z" fill="#f3dcae" opacity="0.74"/><path d="M360 690 L363 697 L370 700 L363 703 L360 710 L357 703 L350 700 L357 697 Z" fill="#f3dcae" opacity="0.86"/></g>
+  <text x="50%" y="390" text-anchor="middle" font-family="Georgia, serif" font-size="240" font-style="italic" fill="#ffffff" opacity="0.92">A</text>
+  <text x="50%" y="496" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" letter-spacing="6" font-size="30.4" fill="#ffffff" opacity="0.95">BEACH TOWEL</text>
+  <text x="50%" y="544" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="20.8" letter-spacing="3" fill="#ffffff" opacity="0.7">OFFICIAL MERCH</text>
+</svg>
