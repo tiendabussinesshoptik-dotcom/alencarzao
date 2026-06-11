@@ -5,6 +5,7 @@
   --bg: #fbf3f8; --card: #ffffff;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
+[hidden] { display: none !important; }
 body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--ink); }
 h1, h2, h3, b { font-family: 'Sora', sans-serif; }
 button { font-family: inherit; }

@@ -60,7 +60,6 @@ document.getElementById("logout-btn").addEventListener("click", () => {
   sessionStorage.removeItem("alz_admin");
   location.reload();
 });
-if (sessionStorage.getItem("alz_admin") === "1") showApp();
 
 // ---------- Navigation ----------
 const titles = { dashboard: "Dashboard", products: "Products", orders: "Orders", leads: "Brand Leads", social: "Social Stats" };
@@ -192,3 +191,7 @@ function renderAll() {
   renderLeads();
   renderSocial();
 }
+
+// Auto-login for an existing session (kept at the end so all
+// declarations above exist when renderAll runs)
+if (sessionStorage.getItem("alz_admin") === "1") showApp();
