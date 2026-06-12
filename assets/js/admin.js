@@ -6,7 +6,7 @@
    - alz_leads           (created by the contact form)
    ============================================================ */
 
-const ADMIN_PASS = "alencar2026"; // demo credential — replace with real auth before production
+const ADMIN_PASS = "bcdb8e43f6aec1cff950d3a6bdf19f32";
 
 // ---------- Seed data ----------
 const SEED_PRODUCTS = [
