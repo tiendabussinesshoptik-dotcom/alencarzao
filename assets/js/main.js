@@ -26,6 +26,26 @@ document.addEventListener("DOMContentLoaded", () => {
     }));
   }
 
+  // ---------- Cookie / local-storage notice ----------
+  if (!localStorage.getItem("alz_cookie_ok")) {
+    const banner = document.createElement("div");
+    banner.className = "cookie-banner";
+    const inLegal = location.pathname.endsWith("legal.html");
+    banner.innerHTML = `
+      <p data-i18n="cookie.text">${t("cookie.text")}</p>
+      <div class="cookie-actions">
+        ${inLegal ? "" : `<a href="legal.html#cookies" data-i18n="cookie.more">${t("cookie.more")}</a>`}
+        <button class="btn btn-primary btn-sm cookie-ok" data-i18n="cookie.accept">${t("cookie.accept")}</button>
+      </div>`;
+    document.body.appendChild(banner);
+    requestAnimationFrame(() => setTimeout(() => banner.classList.add("show"), 600));
+    banner.querySelector(".cookie-ok").addEventListener("click", () => {
+      localStorage.setItem("alz_cookie_ok", "1");
+      banner.classList.remove("show");
+      setTimeout(() => banner.remove(), 600);
+    });
+  }
+
   // ---------- Reveal on scroll ----------
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visible"); io.unobserve(e.target); } });
