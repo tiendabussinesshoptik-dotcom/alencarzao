@@ -84,10 +84,10 @@ function renderDashboard() {
   document.getElementById("kpi-orders").textContent = orders.length;
   document.getElementById("kpi-leads").textContent = leads.length;
 
-  const growth = [8.1, 8.9, 9.6, 10.2, 10.9, 11.5, 12.0, 12.4];
+  const growth = [9.8, 10.7, 11.4, 12.1, 12.8, 13.4, 13.8, 14.0];
   const labels = ["Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May", "Jun"];
   document.getElementById("chart-growth").innerHTML = growth.map((v, i) =>
-    `<div class="bar-col"><div class="bar-v" style="height:${(v / 13) * 100}%" title="${v}M"></div><small>${labels[i]}</small></div>`
+    `<div class="bar-col"><div class="bar-v" style="height:${(v / 15) * 100}%" title="${v}M"></div><small>${labels[i]}</small></div>`
   ).join("");
 
   document.getElementById("dash-leads").innerHTML = leads.slice(0, 4).map(l =>
